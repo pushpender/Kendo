@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+
+	<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet">
+
+	<script src="cordova.js"></script>
+	<script src="kendo/js/jquery.min.js"></script>
+	<script src="kendo/js/kendo.mobile.min.js"></script>
+	<script src="scripts/app.js"></script>
+</head>
+<body>
+    <!-- login -->
+        <div class="km-modalview km-view" data-role="view" id="modalview-login" style="width: 100%; height: 100%;" data-style="inset" view-title="login">
+        <div class="km-header" data-role="header">
+            <div class="km-navbar" data-role="navbar">
+                <div class="km-view-title">
+                    <span><img src="images/logo.png" /></span>
+                </div>
+            </div>
+        </div>
+        <div class="km-listview-wrapper">
+            <div class="km-view-title">
+                    <span>Login</span>
+            </div>
+            <!-- login form -->
+            <form id="login-form">
+                <ul class="km-listview km-list km-listinset login" data-role="listview" data-style="inset">
+                    <li class="username">
+                        <input type="text" id="username" placeholder="Username" name="username"/>
+                    </li>
+                    <li class="password">
+                        <input type="password" id="password" placeholder="Password" name="password"/>
+                    </li>
+                </ul>
+            
+            <!-- login button -->
+                <a data-role="button" data-click="validate" href="" class="km-widget km-button" style="display: block; margin: 1em">
+                                <span class="km-text">Login</span>
+                         </a>
+             </form>
+            <!--<div class="km-rightitem" style="height:auto">
+                <a href="#">Forgot password?</a>
+            </div>-->
+        </div>
+        <!-- footer -->
+       <footer data-role="footer" class="km-footer" style="bottom:0">
+        <span> copy right aptaracorp.com</span>
+       </footer>
+    </div>
+    <!-- view 1 -->
+    <div data-role="view" data-layout="drawer-layout" data-title="View 1 Title" id="View1Title">
+        <header data-role="header" class="km-header">
+                    <!-- drawer buttom -->
+                    <div class="km-leftitem">
+                        <a data-role="button" data-rel="drawer" href="#Drawer1" data-icon="drawer-button" data-align="left" class="km-widget km-button">
+                        <span class="km-icon km-drawer-button km-notext"><img src="images/icon_drawer.png" /></span></a>
+                    </div>
+                    <div class="km-rightitem">
+                        <!-- list view button -->
+                         <a  data-role="button"  data-align="right" class="km-widget km-button list-view">
+                             <span class="km-icon km-canvas km-notext"><img src="images/icon-list-view.png" /></span></a>
+                        <!-- list view button 
+                        <a  data-role="button"  data-transition="slide" data-align="right" class="km-widget km-button list-view">
+                        <span class="km-icon km-canvas km-notext"><img src="images/icon-list-view.png" /></span></a>-->
+                    </div>
+         </header>  
+         <!-- user list  -->
+         <ul data-role="listview"  class="item-list km-widget km-listview km-list" id="users-list">
+             <li data-role="touch" data-tap="myalert('info_01')" data-transition="slide"  >
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_01">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_02">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_03">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_04">
+                 <a class="details-link" >
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_05">
+                 <a class="details-link" >
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_06">
+                 <a class="details-link" >
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_07">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_08">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+             <li data-role="touch" data-tap="myalert" data-transition="slide" id="user_09">
+                 <a class="details-link">
+                     <img src="images/user_01.png" />
+                    <h2>#Username1 Lastname</h2>
+                 </a>
+             </li>
+        </ul>
+    </div>
+    <!-- drawer -->
+    <div id="Drawer1" data-role="drawer" data-views="['View1Title' ,'/kendo-ui/mobile/m/drawer/index.html']" class="km-left-drawer">
+        <div class="km-header" data-role="header">
+                <div class="km-view-title">
+                    <span>Aptara</span>
+                </div>
+        </div> 
+        <!-- user info --> 
+        <div class="user-info">
+            <img src="images/user_01.png" />
+            <div class="float-right user-information">
+                <h4>#Username1 Lastname</h4>
+                <p>bhakti.papal@aptaracorp.com</p>
+             </div>          
+         </div>
+
+        <ul data-role="listview" class="item-list km-widget km-listview km-list" style="clear:both">
+             <li data-role="touch" data-tap="myalert" data-transition="slide">
+                 <a class="details-link">
+                     Profile
+                 </a>
+             </li>
+            <li data-role="touch" data-tap="myalert" data-transition="slide">
+                 <a class="details-link">
+                     Setting
+                 </a>
+             </li>
+            <li data-role="touch" data-tap="myalert" data-transition="slide">
+                 <a class="details-link">
+                     Help
+                 </a>
+             </li>
+            <li data-role="touch" data-tap="myalert" data-transition="slide">
+                 <a class="details-link">
+                     Feedback
+                 </a>
+             </li>
+            <li data-role="touch" data-tap="myalert" data-transition="slide">
+                 <a class="details-link logOut">
+                     Logout
+                 </a>
+             </li>
+        </ul>
+    </div>
+    <!-- view 2 -->
+    <div data-role="view" data-layout="my-layout"
+    data-title="View 2 Title" id="View2Title">
+        <header data-role="header" class="km-header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#View1Title"><img src="images/back.png" /></a>
+            </div>
+            <div class="km-rightitem">
+                <a data-align="left" data-role="backbutton" href="#modalview-login"><img src="images/sign-off.png" /></a>
+            </div>
+        </header>
+        <div id="scrollview-container">
+        <div data-role="scrollview" data-page="0">
+            <div class="photo photo1" data-role="page">
+                <div id="info_01">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username1 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_02">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username2 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_03">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username3 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_04">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username4 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_05">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username5 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_06">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username6 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_07">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username7 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_08">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username8 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_09">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username9 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="" data-role="page">
+                <div id="info_10">
+                    <img  src="images/user_01.png" class="box-col">
+                    <div id="description" class="box-col">
+                        <h3 class="username">#Username10 Lastname</h3>
+                        <p class="email">test@test.com</p>
+                        <p class="phonenumber">000-000-000</p>
+                    </div>
+                    <div class="detail-description clear">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                         <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- profile -->
+    <div data-role="view" data-layout="my-layout"
+    data-title="" id="profile">
+        <div class="km-header" data-role="header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#View1Title" data-transition="slide">
+                    <img src="images/back.png" />
+                </a>
+            </div>
+            <div class="km-view-title">
+                <span>Profile</span>
+            </div>
+        </div>
+        <img src="images/user_01.png" class="user-pic"/>
+        <ul data-role="listview" class="item-list km-widget km-listview km-list user-profile" >
+             <li>
+                 <lable>Name:</lable>
+                 <span>Username lastname</span>
+             </li>
+            <li>
+                <lable>Emp. Code:</lable>
+                <span>P00000</span>
+             </li>
+            <li>
+                <lable>SUB:</lable>
+                <span> MST</span>
+             </li>
+            <li>
+                <lable>DOJ:</lable>
+                <span>1-10-2014</span>
+             </li>
+            <li>
+                <lable>Email:</lable> 
+                <span>bhakti.papal@aptaracorp.com</span>
+             </li>
+        </ul>
+    </div>
+     <!-- settings -->
+     <div data-role="view" data-layout="my-layout"
+    data-title="" id="setting">
+         <div class="km-header" data-role="header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#View1Title" data-transition="slide">
+                    <img src="images/back.png" />
+                </a>
+            </div>
+            <div class="km-view-title">
+                <span>Setting</span>
+            </div>
+        </div>
+    </div>
+     <!-- help -->
+     <div data-role="view" data-layout="my-layout"
+    data-title="" id="help">
+        <div class="km-header" data-role="header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#View1Title" data-transition="slide">
+                    <img src="images/back.png" />
+                </a>
+            </div>
+            <div class="km-view-title">
+                <span>Help</span>
+            </div>
+        </div>
+    </div>
+    <!-- feedback -->
+     <div data-role="view" data-layout="my-layout"
+    data-title="" id="feedback">
+         <div class="km-header" data-role="header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#View1Title" data-transition="slide">
+                    <img src="images/back.png" />
+                </a>
+            </div>
+            <div class="km-view-title">
+                <span>Feedback</span>
+            </div>
+        </div>
+    </div>
+    <!-- logout -->
+     <div data-role="view" data-layout="my-layout"
+    data-title="" id="logout" class="logOut">
+          <div class="km-header" data-role="header">
+            <div class="km-leftitem">
+                <a data-align="left" data-role="backbutton" href="#modalview-login" data-transition="slide">
+                    <img src="images/back.png" />
+                </a>
+            </div>
+            <div class="km-view-title">
+                <span>Log Out</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        i = 1
+        $('#users-list li').each(function(i, e){
+            //$(this).append('<span class="user"></span>');
+            $(".user").attr("id", "id_" + i);
+        });
+        
+         function myalert(e){
+             alert("tab");
+         }
+        //login validatation 
+        
+         var ck_username = /^aptara$/;
+        var ck_password = /^aptara$/;
+   
+        function validate(){
+            //alert('validate')
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            
+            if(username.value != "" && password.value != ""){
+                if (username.value.match(ck_username) && password.value.match(ck_password)) {
+                    $("#login-form a").attr("href", "#View1Title");
+                    //username.value = "";
+                    //password.value ="";
+                }
+                else{
+                        alert("invaild username or password");
+                    }
+            }
+            else{
+                if(!username.value.match(ck_username) && username.value != ""){
+                    alert("invaild username");
+                }
+                else if(username.value == ""){
+                    alert("username is blank");
+                    username.value = "";
+                    password.value ="";
+                }
+                else if(password.value == ""){
+                    alert("password is blank");
+                }
+            }
+         }
+        
+        $(".logOut").click(function() {
+            //alert( "Handler for .click() called." );
+            username.value = "";
+            password.value ="";
+        });
+        
+        // toggle button box-view & list-view
+       $.fn.toggleClick=function(){
+            var functions=arguments, iteration=0
+            return this.click(function(){
+                functions[iteration].call()
+                iteration= (iteration+1) %functions.length
+            })
+        }
+        $( ".km-rightitem .list-view" ).toggleClick(function() {
+             $(".km-rightitem .list-view img").attr("src", "images/icon-box-view.png");
+            $("ul.item-list").addClass("boxView");
+           
+        }, function() {
+            $(".km-rightitem .list-view img").attr("src", "images/icon-list-view.png");
+            $("ul.item-list").removeClass("boxView");
+        });
+    </script>
+</body>
+</html>

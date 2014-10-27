@@ -1,0 +1,260 @@
+img { max-width: 100%; }
+
+.km-view-title{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+}
+
+.km-horizontal .km-view-title {
+    line-height: 2.5em;
+}
+
+.km-header{
+    background: #f4f4f4;
+}
+
+/* login css start */
+#modalview-login .km-view-title{
+    border: 0;
+    margin-bottom: 0;
+}
+.km-flat .km-list input[type=password],
+.km-flat .km-list input[type=text]:not(.k-input){
+    min-width: 100%;
+}
+
+.km-button .km-text{
+    text-align: center;
+    display: block
+}
+
+.km-navbar .km-view-title{
+    line-height: 0;
+}
+
+.km-flat .km-listinset.login > li{
+    height: 40px;
+}
+
+
+#login-form .username:before {
+    background-image: url("../images/icon-username.png");
+}
+
+#login-form .password:before {
+    background-image: url("../images/icon-password.png");
+}
+
+#login-form .username:before, #login-form .password:before {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 1em;
+    margin-top: -0.5em;
+    position: absolute;
+    right: 0.30em;
+    top: 50%;
+    width: 1em;
+}
+
+#login-form .username input, #login-form .password input{
+    padding-right: 20px;
+}
+
+/* login css end
+
+/* page1 css start */
+
+#View1Title header{
+    height:52px;
+}
+
+.item-list img {
+    width: 4em;
+    height: 4em;
+    float: left;
+    margin-right: 1em;
+    margin-right: 1rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    border: 1px solid rgba(0,   0,0,.2);
+}
+
+.km-content .item-list h2 {
+    margin: 0;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: 1.4em;
+    font-size: 1.1rem;
+    margin-top: 1.4rem;
+}
+
+.item-list a.details-link {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.boxView{
+}
+
+ .km-flat #View1Title .km-list.boxView > li{
+    width: 50%;
+    float: left;
+    border: 1px solid rgba(0,0,0,0.1);
+}  
+
+.km-flat #View1Title .km-list.boxView > li img{
+    display: block;
+    margin: auto;
+    float: none;
+}
+
+.km-flat #View1Title .km-list.boxView > li  h2{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.km-flat #View1Title .km-list.boxView > li .km-listview-link:after,
+.km-flat #View1Title .km-list.boxView > li.km-listview-label:after{
+    right: -1rem;
+}
+
+.box-col{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+#detail-info img{
+    width: 5em;
+    height: 5em;
+    float: left;
+    margin-right: 1em;
+    margin-right: 1rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    margin-left: 1em;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+#View2Title .km-header{
+    height: 48px;
+}
+
+.box-col h3,
+.box-col p{
+    margin: 10px;
+}
+
+
+/* page1 css end */
+
+/* drawer css start */
+.km-left-drawer .user-info  img{
+    width: 4em;
+    height: 4em;
+    float: left;
+    margin-right: 0.6em;
+    margin-right: 0.6rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    margin-left: 0.6em;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.km-left-drawer .km-content  h4{
+    margin: 10px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.km-left-drawer .km-content p{
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 12px;
+}
+
+.float-right{
+    float: right;
+}
+
+.user-info{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    min-height: 66px;
+}
+
+.user-info .user-information{
+    width: 69%;
+}
+
+/* drawer css end */
+.detail-description p{
+    white-space : normal;
+}
+/* profile */
+
+.user-profile lable {
+    color: #3B5998;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    float: left;
+}
+
+.user-profile span {
+    width: 72%;
+    text-align: left;
+    float: right;
+}
+
+#profile img.user-pic{
+    width: 10em;
+    height: 10em;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+/* profile */
+
+#View2Title .km-content img{
+    margin-right: 0;
+}
+
+[data-role="backbutton"] {
+    background: none;
+    border: 0;
+}
+
+#View2Title .km-pages{
+    display: none;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 144dpi) {
+
+    #login-form .username:before {
+        background-image: url(../images/icon-username@2x.png);
+        background-size: 12px 13px;
+    }
+
+    #login-form .password:before {
+        background-image: url(../images/icon-password@2x.png);
+        background-size: 10px 12px;
+    }
+}
